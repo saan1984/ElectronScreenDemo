@@ -1,0 +1,18 @@
+<h1>Electron Application Screen Example</h1>
+<script>
+    var electronScreen = require('screen'),
+        allDisplay = electronScreen.getAllDisplays(),
+        primaryDisplay = electronScreen.getPrimaryDisplay(),
+        displayPoint = electronScreen.getDisplayNearestPoint({x:200,y:400});
+    console.log("No of Display Connected: ",allDisplay.length);
+    console.log("PrimaryDisplay: ",primaryDisplay);
+    console.log("DisplayPoint: ",displayPoint);
+    //Properties of a Electron Screen Display unit
+    console.log("Bounds: ",primaryDisplay.bounds);
+    console.log("rotation: ",primaryDisplay.rotation);
+    console.log("scaleFactor: ",primaryDisplay.scaleFactor);
+    console.log("size: ",primaryDisplay.size);
+    console.log("workArea: ",primaryDisplay.workArea);
+    console.log("workAreaSize: ",primaryDisplay.workAreaSize);
+    console.log("touchSupport: ",primaryDisplay.touchSupport);
+</script>
